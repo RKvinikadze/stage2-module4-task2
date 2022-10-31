@@ -1,6 +1,5 @@
 package com.mjc.stage2.impl;
 
-
 import com.mjc.stage2.Connection;
 
 public class ProxyConnection implements Connection {
@@ -16,6 +15,8 @@ public class ProxyConnection implements Connection {
 
     @Override
     public void close() {
+        ConnectionPool connectionPool = ConnectionPool.getInstance();
+        connectionPool.releaseConnection(this);
     }
 
     @Override

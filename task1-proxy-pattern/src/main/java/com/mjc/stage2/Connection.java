@@ -2,7 +2,7 @@ package com.mjc.stage2;
 
 public interface Connection {
 
-     void close() ;
+     void close();
 
-     boolean isClosed() ;
+     boolean isClosed();
 }
